@@ -1,0 +1,74 @@
+<nav class="navbar">
+  <div class="container-fluid" style="background: linear-gradient(to bottom right, #22308E 0%, #0b0d4a 100%);">
+    <image src="style/barra.jpeg" style="width: 100%; position: relative; top: -10px;height: 10px;"></image>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <image src="style/logo_institucional.png" style="width: 200px"></image>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" style="margin-top: 15px">
+      <ul class="nav navbar-nav" style="display: inline-block">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="http://localhost:8090/portal/dashBoard/reporte" target="_blank">Reportes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              <li><a href="http://rptredeban.azurewebsites.net/ciudadesx" target="_blank">Ventas por ciudad</a></li>
+              <li><a href="http://rptredeban.azurewebsites.net/clientex" target="_blank">Ventas por medio de pago</a></li>
+          </ul>
+        </li>
+        <li><a href="#!chart/1"> Transacciones </a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" style="cursor :pointer">Analitica <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              <li><a href="https://app.powerbi.com/view?r=eyJrIjoiMDAwMTYzZWQtZDdmMy00NjJmLTk4OTgtY2I0OGYyYmE4MTEzIiwidCI6ImM4MWU3NDEzLWZmNWMtNGY2YS1iMzZkLTljNDc3YTA2NjhlYyIsImMiOjR9" target="_blank"> Ventas</a></li>
+
+              <li><a href="https://app.powerbi.com/view?r=eyJrIjoiNjYxYzUwZDItYzY1OC00Y2I0LWIxNDItNWQyNjFhNGNmMjZlIiwidCI6ImM4MWU3NDEzLWZmNWMtNGY2YS1iMzZkLTljNDc3YTA2NjhlYyIsImMiOjR9" target="_blank"> Clientes</a></li>
+
+              <li><a href="https://app.powerbi.com/view?r=eyJrIjoiZDM0MTNhYmYtZmEzZC00M2JlLWJkNTAtZDQ4NzQ0YzcxZjcyIiwidCI6ImM4MWU3NDEzLWZmNWMtNGY2YS1iMzZkLTljNDc3YTA2NjhlYyIsImMiOjR9" target="_blank"> Vs. Sector Económico</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://rdbntest.azurewebsites.net/#!/chart/1"> {{usuario}} </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row" style="margin-bottom: 20px">
+    <!-- <div class="col-sm-2">
+      <img src="stylesheets/logo_Redeban.png" style="margin-top: 20px; height: 80px">
+    </div> -->
+    <div class="col-sm-4" style="margin-top: 20px; margin-left: 10px">
+      <h2> {{clientName}} </h2>
+    </div>
+  </div>
+  <div class="row" style="margin-left: 25px">
+    <h3> Transacciones de Venta en Tiempo Real </h3>
+  </div>
+
+  <div class="row" style="margin-left: 25px">
+    <h4 > Total Ventas: {{ valorTotalToString }} </h4>
+  </div>
+
+  <div>
+    <canvas id="myChart" width="400" height="150"></canvas>
+  </div>
+
+  <table>
+    <thead>
+      <th> HORA </th>
+      <th> CIUDAD </th>
+      <th> PAGO </th>
+      <th> TIPO DE TARJETA </th>
+    </thead>
+    <tr ng-repeat="sell in sells" ng-click="openModal(sell)">
+      <td> {{sell.time}} </td>
+      <td> {{sell.ciudad}} </td>
+      <td> {{sell.money}} </td>
+      <td> {{sell.tipoTarjeta}} </td>
+    </tr>
+  </table>
+</div>

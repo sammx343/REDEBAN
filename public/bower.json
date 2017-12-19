@@ -1,0 +1,25 @@
+{
+  "name": "bower",
+  "authors": [
+    "Sebastian Mayor <naitsabes29@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-route": "^1.5.3",
+    "bootstrap": "^3.3.7",
+    "bootstrap-sweetalert": "^1.0.1",
+    "ng-table-bundle": "~3"
+  }
+}

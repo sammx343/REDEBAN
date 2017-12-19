@@ -1,0 +1,83 @@
+body, table{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h1, h2, h3{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+}
+
+h4{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+}
+
+.modal-body h4 {
+    color: #33559d
+}
+
+.modal-body span{
+    color: #333
+}
+
+td, th{
+    padding: 4px 50px;
+}
+
+table {
+    margin: 20px auto 100px;
+    border-collapse: collapse;
+}
+
+
+tr:nth-child(even){
+    background-color: #F5F5F5;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 8px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+thead {
+    padding: 10px;
+    margin-bottom: 15px; 
+    color: #33559d;
+    border-bottom: 2px ridge #33559d;
+}
+
+tr.ng-scope:hover {
+    background: #fdfbda ;
+    cursor:pointer
+}
+
+.navbar a{
+    color: white;
+    font-size: 17px
+}
+
+.navbar a:hover{
+    color: black;
+}
+
+button.navbar-toggle {
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    margin-top: 15px
+}
+
+span.icon-bar {
+    background: white;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
